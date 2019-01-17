@@ -367,6 +367,8 @@ public class Helper {
 				data.append(String.format("%.5f", executionTimeTotalMean) + delimeter);
 				data.append(String.format("%.5f", executionTimeTotalStDev) + delimeter);
 
+
+				/*写各个主机的历史数据*/
 				writeMetricHistory(hosts, vmAllocationPolicy, outputFolder + "/metrics/" + experimentName
 						+ "_metric");
 			}
@@ -462,6 +464,7 @@ public class Helper {
 
 		Log.setDisabled(true);
 	}
+
 
 	/**
 	 * Parses the experiment name.
@@ -678,9 +681,9 @@ public class Helper {
 			List<? extends Host> hosts,
 			PowerVmAllocationPolicyMigrationAbstract vmAllocationPolicy,
 			String outputPath) {
-		// for (Host host : hosts) {
-		for (int j = 0; j < 10; j++) {
-			Host host = hosts.get(j);
+		 for (Host host : hosts) {
+//		for (int j = 0; j < 10; j++) {
+//			Host host = hosts.get(j);
 
 			if (!vmAllocationPolicy.getTimeHistory().containsKey(host.getId())) {
 				continue;

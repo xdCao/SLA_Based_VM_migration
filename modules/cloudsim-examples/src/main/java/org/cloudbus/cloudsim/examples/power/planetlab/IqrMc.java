@@ -30,6 +30,10 @@ public class IqrMc {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void main(String[] args) throws IOException {
+		run();
+	}
+
+	public static void run() {
 		boolean enableOutput = true;
 		boolean outputToFile = false;
 		String inputFolder = IqrMc.class.getClassLoader().getResource("workload/planetlab").getPath();

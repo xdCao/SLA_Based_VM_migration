@@ -175,6 +175,8 @@ public abstract class RunnerAbstract {
 			List<Cloudlet> newList = broker.getCloudletReceivedList();
 			Log.printLine("Received " + newList.size() + " cloudlets");
 
+
+
 			CloudSim.stopSimulation();
 
 			Helper.printResults(
@@ -184,6 +186,10 @@ public abstract class RunnerAbstract {
 					experimentName,
 					Constants.OUTPUT_CSV,
 					outputFolder);
+
+
+
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
